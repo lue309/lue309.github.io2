@@ -1,0 +1,31 @@
+body {
+  background-image: url("images/background.png");
+  font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 100px auto;
+  background-color: white;
+  padding: 10px;
+
+
+}
+h2 {
+  color: #e7642c;
+  font-family: 'Sintony', sans-serif;
+}
+.awesomeclass .awesome {
+  color: #0000FF;
+}
+
+.awesomeclass {
+
+  color:#44FF33;}
+
+  #directions {
+
+  color: #ff0088;}
+table { color: blue;}
+.row {color: red;}
+.green {color: #44FF33;}

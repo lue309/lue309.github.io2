@@ -136,7 +136,7 @@ padding-top: 25px;
       font-family: "Futura", sans-serif;;
       color: #f9745f;
       background: #d3eef9;
-      width: 50%;
+      width: 100%;
       line-height: 100%;
       text-align: justify;
       margin: auto;
@@ -159,7 +159,7 @@ padding-top: 25px;
         }
 
     .wrapper2 {
-      width: 60%;
+      width: 80%;
       background: #fff;
       margin: auto;
     padding: 40px 80px 650px 50px;

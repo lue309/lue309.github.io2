@@ -130,3 +130,123 @@ padding-top: 25px;
   text-align: center;
     right: 200px;
   {font-family: Futura};
+
+  @media (max-width: 600px) {
+    body {
+      font-family: "Futura", sans-serif;;
+      color: #f9745f;
+      background: #d3eef9;
+      width: 100%;
+      line-height: 100%;
+      text-align: justify;
+      margin: auto;
+
+    }
+
+
+    ul li {
+      list-style-type: disc;
+        list-style-position: inside;
+        padding: 10px 0 10px 5px;
+        text-indent: -1em;
+        }
+
+      .wrapper {
+          width: 60%;
+          background: #d3eef9;
+          margin: auto;
+          padding: 10px;
+        }
+
+    .wrapper2 {
+      width: 80%;
+      background: #fff;
+      margin: auto;
+    padding: 40px 80px 650px 50px;
+    }
+
+    .h2 {
+      background: #f7c7c7;
+      align-items: left;
+      border: 3px solid #f8df6d;
+      padding: 10px;
+      width: 100%;	height: 100%;
+      margin: 0;
+      color: #965B59;
+      right: 200px;
+      line-height: 140%;
+    }
+
+    .h2,.h3,.h5 {font-weight: normal;}
+    .h2 {letter-spacing: 30px;}
+    .h2,.h3,.h5 {text-align: justify;}
+    .h2,.h3,.h5 {text-align: center;}
+    .h2,.h3,.h5 {font-size: 20px;}
+    .h3,.h5 {letter-spacing: 20px;}
+    .h2, { color: #58181D;}
+      {color: #f9745f;}
+
+    .ENTRIES {
+    border: 3px solid #965B59;
+    float: right;
+    padding: 10px;
+    width: 25%;
+    height: 25%;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-right: -80%;
+    }
+
+    .ENTRIES2 {
+    border: 3px solid #965B59;
+    float: left;
+    padding: 10px;
+    width: 25%;
+    height: 25%;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: -110%;
+    }
+
+    .s1 {
+      float: left;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      width: 30%;
+
+    }
+
+    .s2 {
+      float: left;
+    margin-right: 2.5%;
+      width: 30%;
+    }
+
+    .s3 {
+      float: right;
+      width: 30%;
+      margin-right: 2.5%;
+    }
+
+    .moveimage {
+      float: left;
+      margin-top: 40px;
+      width: 50%;
+      margin-left: 30%;
+
+    }
+    .footer {
+      background: #fccfcf;
+      margin-top: 30px;
+        opacity: 0.7;
+      width: 100%;
+      height: 50px;
+    padding-top: 25px;
+      border: 3px solid #965B59;
+      float: right;
+      letter-spacing: 20px;
+      text-align: center;
+        right: 200px;
+      {font-family: Futura};
+    }
+  }

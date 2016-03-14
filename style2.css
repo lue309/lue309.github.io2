@@ -16,7 +16,7 @@ input#submit{
     height: 30px;
 }*/
 body {
-  font-family: "Futura", sans-serif;;
+  font-family: 'Nunito', sans-serif;
   color: #f9745f;
   background: #d3eef9;
   width: 100%;
@@ -134,7 +134,7 @@ padding-top: 25px;
   letter-spacing: 20px;
   text-align: center;
     right: 200px;
-  {font-family: Futura};
+  {font-family: Nunito};
 }
 
 
@@ -142,6 +142,7 @@ padding-top: 25px;
 body {
   width: 95%;
     text-align: left;
+
 }
   .wrapper {
     width: 95%;
@@ -236,6 +237,6 @@ body {
   margin-left: 2%;
   letter-spacing: 10px;
   text-align: center;
-  font-family: Futura;
+  font-family: 'Nunito'; sans-serif;
   font-size: 12px;
 }

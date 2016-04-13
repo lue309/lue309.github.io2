@@ -8,27 +8,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="style.css">
-
+        <link rel="stylesheet" href="style3.css">
 
 
     </head>
     <body>
-      Coding is
+        <div class="container">
+
+            <div id="questions">
+      <h4>Da info</h4>
+      please provide a
       <input type="text" id="answer1" placeholder="Adjective" >
-      but maybe after
-      <input type="text" id="answer2" placeholder="Number" >
-      years things will be
+      and then a
+      <input type="text" id="answer2" placeholder="Number">
+    and maybe a
       <input type="text" id="answer3" placeholder="Adjective" >
-      and if not, there will always be
+      and finally a
       <input type="text" id="answer4" placeholder="Noun" >
-      .
 
-  <button id="myButton">submit</button>
 
-<div id="story"></div>
 
-  <script src='main.js'></script>
+  <button id="myButton" type="submit" class="btn btn-primary btn-lg">Submit!</button>
+</div>
+</div>
+
+
+<div id="story">
+        <h1>Da story</h1>
+        <hr>
+        <h3>Coding is <span class="answer1"></span> but maybe after <span class="answer2"></span> years things will be <span class="answer3"></span>, and if not, there will always be <span class="answer4"></span>. </h3>
+      </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src='main3.js'></script>
 
     </body>
 

@@ -1,0 +1,694 @@
+
+
+/*<meta name ="viewport" content ="initial-scale = 1.0, user-scalable = no">*/
+
+/*#container{
+    width: 250px;
+    margin: 0 auto;
+}
+input{
+    width: 250px;
+    height: 25px;
+    font-size:18px;
+    -webkit-border-radius: 5px;
+}
+input#submit{
+    width: 80px;
+    height: 30px;
+}*/
+body {
+	font-family: 'Muli', sans-serif;
+  color: #f9745f;
+  background: #ffd4cc;
+  width: 100%;
+  line-height: 140%;
+
+}
+
+
+.header {
+	width: 100%;
+	margin: auto;
+	letter-spacing: 8px;
+}
+.articleTitle {
+	background-image: url('photo1.png');
+	height: 100px;
+	background-size: 100%;
+	opacity: .6;
+ 	background-position: center;
+	background-repeat:no-repeat;
+	text-align: center;
+	display: flex;
+	margin-left: -8px;
+
+}
+
+.articleText {
+	margin-top: 35px;
+	margin-left: auto;
+  margin-right: auto;
+	font-family: 'Muli', sans-serif;
+	letter-spacing: 8px;
+	color: #ffffff;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+header{
+		width:100%;
+		margin: 0 auto;
+		margin-top: 4%;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+	font-family: 'Muli', sans-serif;
+	letter-spacing: 4px;
+	font-size: 14px;
+	padding: 10px;
+	text-align: center;
+}
+
+
+
+$menu_WIDTH: 150px;
+
+.menu {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.menu-title {
+  display: inline-block;
+  height: 40px;
+  padding: 12px 10px 0;
+background: none; border-radius: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  transition: 0.3s background-color;
+
+
+}
+
+.menu-title:before {
+  content: "";
+  display: inline-block;
+  height: 0;
+	text-align: center;
+  border-left: ($menu_WIDTH / 2) solid transparent;
+  border-right: ($menu_WIDTH / 2) solid transparent;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+  transition:
+    0.2s 0.2s border-top ease-out,
+    0.3s border-top-color;
+		border-top-color: none; border-radius: 50px;
+}
+
+
+.menu:hover > .menu-title:before {
+  border-top-width: 0;
+  transition:
+    0.2s border-top-width ease-in,
+    0.3s border-top-color;
+
+}
+
+.menu-title:after {
+  display: inline-block;
+  height: 0;
+  border-left: ($menu_WIDTH / 2) solid transparent;
+  border-right: ($menu_WIDTH / 2) solid transparent;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  transition: 0.2s border-bottom ease-in;
+}
+
+.menu:hover > .menu-title:after {
+  border-bottom-width: 5px;
+  transition: 0.2s 0.2s border-bottom-width ease-out;
+}
+.menu-title { background: none; border-radius: 50px; }
+.menu-title:hover { background: #d46c53; border-radius: 50px;}
+.menu-title:before { border-top-color: none; border-radius: 50px;}
+.menu-title:hover:before { border-top-color: #d46c53; border-radius: 50px; }
+
+.menu-title_2nd { background: none; border-radius: 50px; }
+.menu-title_2nd:hover { background: #d46c53; border-radius: 50px;}
+.menu-title_2nd:before { border-top-color: none; border-radius: 50px;}
+.menu-title_2nd:hover:before { border-top-color: #d46c53; border-radius: 50px; }
+
+.menu-title_3rd { background: none; border-radius: 50px;}
+.menu-title_3rd:hover { background: #d46c53; border-radius: 50px; }
+.menu-title_3rd:before { border-top-color: none; border-radius: 50px;}
+.menu-title_3rd:hover:before { border-top-color: #d46c53; border-radius: 50px;}
+
+.menu-title_4th { background: none; border-radius: 50px; }
+.menu-title_4th:hover { background: #d46c53; border-radius: 50px;}
+.menu-title_4th:before { border-top-color: none; border-radius: 50px; }
+.menu-title_4th:hover:before { background: #d46c53; border-radius: 50px; }
+
+.menu-dropdown {
+width: 190px;
+  padding: 10px 0;
+  background: #d46c53;
+	opacity: .8;
+  z-index: 100;
+	color: #f9f4e7;
+  transition:
+    0.5s padding,
+    0.5s background;
+	position: absolute;
+	margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-dropdown:after {
+  content: "";
+  display: block;
+  height: 0;
+  border-left: ($menu_WIDTH / 2) solid transparent;
+  border-right: ($menu_WIDTH / 2) solid transparent;
+  top: 100%;
+  left: 0;
+  z-index: 101;
+  transition: 0.5s border-top;
+}
+
+.menu:not(:hover) > .menu-dropdown {
+  padding: 0px 0;
+  background: #d46c53;
+	opacity: .4;
+  z-index: 99;
+}
+
+.menu-dropdown > * {
+  overflow: hidden;
+  height: 30px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  transition:
+    0.5s height cubic-bezier(.73,.32,.34,1.5),
+    0.5s padding cubic-bezier(.73,.32,.34,1.5),
+    0.5s margin cubic-bezier(.73,.32,.34,1.5),
+    0.5s 0.2s color,
+    0.2s background-color;
+}
+
+.menu-dropdown > *:hover {
+  background: #455525;
+
+}
+
+.menu:not(:hover) > .menu-dropdown > * {
+  visibility: hidden;
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+  color: rgba(25,25,25,0);
+  transition:
+    0.5s 0.1s height,
+    0.5s 0.1s padding,
+    0.5s 0.1s margin,
+    0.3s color,
+    0.6s visibility;
+  z-index: 99;
+}
+
+.hList {
+	display: inline-block;
+  //overflow: hidden;
+}
+
+.hList > * {
+  display: block;
+	float: left;
+	margin-left: 57px;
+	margin-bottom: 40px;
+	position: relative;
+
+}
+
+
+.logo-container {
+	width: 144px;
+	height: 123px;
+	z-index: 99;
+	float: left;
+	margin-top: -26px;
+	margin-bottom: 15px;
+}
+
+.logo-link {
+	display: block;
+	height: 100%;
+	background-image: url('logo.png');
+	background-size: 95%;
+	background-position: center;
+ 	background-repeat:no-repeat;
+}
+
+.commentBox {
+position: relative;
+margin-left: auto;
+margin-right: auto;
+margin-top: -80px;
+width: 80%;
+}
+/*.navv {
+    list-style-type: none;
+    padding: 0;
+    background-color: none;
+	  width: 100%;
+		text-align: center;
+		font-size: 16px;
+		font-family: 'Muli', sans-serif;
+		font-weight: bolder;;
+		letter-spacing: 2px;
+}
+
+.navv__item {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.logo-container {
+	width: 144px;
+	height: 123px;
+}
+
+.logo-link {
+	display: block;
+	height: 100%;
+	background-image: url('logo.png');
+	background-size: 95%;
+	background-position: center;
+ 	background-repeat:no-repeat;
+}
+
+/* Drop Down Styles
+================================ */
+/*
+nav .drop-down {
+  list-style: none;
+  overflow: hidden;
+  -webkit-transition: height 0.3s ease;
+          transition: height 0.3s ease;
+					list-style-type: none;
+					width: 11%;
+					text-align: center;
+					font-size: 16px;
+					font-family: 'Muli', sans-serif;
+					font-weight: bolder;;
+					letter-spacing: 2px;
+
+/*
+nav .drop-down.closed {
+
+  height: 0;
+	width: 100px;
+
+}
+
+
+nav .drop-down li {
+
+
+}
+
+nav .drop-down li a {
+
+	  border-bottom: 2px solid #445423;
+		padding-bottom: 2px;
+		display: inline-block;
+		vertical-align: middle;
+		color: white;
+		text-align: center;
+		margin: auto;
+		text-decoration: none;
+}
+
+nav .drop-down li:first-child a:after {
+  content: "\25BC";
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	text-align: center;
+	margin: auto;
+	text-decoration: none;
+}*/
+
+li a{
+	margin:0;
+	padding:0;
+}
+.footer {
+	display: inline-block;
+	background: #445423;
+	width: 100%;
+	height: 50px;
+}
+.footerNav {
+	list-style:none;
+	margin:0;
+	padding:0;
+	margin-top: 40px;
+	margin-left: -8px;
+	text-align: center;
+	background: #445423;
+	width: 100%;
+	height: 50px;
+	text-decoration: none;
+	font-family: 'Muli', sans-serif;
+	color: #f9eadd;
+}
+
+.footerNav li {
+	 display:inline;
+}
+.footerNav a {
+	display:inline-block;
+ padding:10px;
+}
+
+  .wrapper {
+      width: 90%;
+      background: #f9f4e7;
+      margin: auto;
+			margin-top: 3%;
+			height: 2100px;
+		  color: #f9745f;
+    }
+		/*.image2 {
+			width: 30%;
+			float: right;
+			padding-top: 4%;
+			padding-right: 7%;
+
+		}*/
+.instructions {
+	width: 55%;
+	letter-spacing: 2px;
+	padding: 3%;
+	font-size: 14px;
+
+}
+.instructions2 {
+	width: 90%;
+	letter-spacing: 2px;
+	margin-top: -3%;
+	padding: 3%;
+	font-size: 14px;
+	margin-bottom: 3%;
+}
+p {
+padding-bottom: 10px;
+}
+
+.slider{
+	width: 320px; /*Sam616 × 462e as width of the large image*/
+	position: relative;
+	/*Instead of height we will use padding*/
+	padding-top: 320px; /*That helps bring the labels down*/
+  float: right;
+	margin-top: 30px;
+	margin-right: 40px;
+
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+	position: absolute;
+	left: 0;
+	top: 10%;
+	transition: all 0.5s;
+	width: auto;
+	height: 60%;
+	margin-left: -50px;
+}
+#slider2 {
+	position: absolute;
+	top: 10%;
+	transition: all 0.5s;
+	height: 80%;
+	width:auto;
+	margin-left: 0;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 18px 4px 0 0px;
+	border: 3px solid #877c6a;
+  margin-top: 60px;
+	margin-bottom: -35px;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.3s;
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	/*Default style = low opacity*/
+	opacity: 0.5;
+}
+
+.slider label img{
+	display: block;
+
+
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+	border-color: #877c6a;
+	opacity: .5;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+
+
+
+
+/*
+.wrapper2 {
+  width: 50%;
+  background: #fff;
+  margin: auto;
+padding: 40px 80px 600px 50px;
+}
+
+.h2 {
+  background: #f7c7c7;
+  align-items: left;
+  border: 3px solid #f8df6d;
+  padding: 10px;
+  width: 100%;	height: 100%;
+  margin: 0;
+  color: #965B59;
+  right: 200px;
+  line-height: 140%;
+}
+
+.h2,.h3,.h5 {font-weight: normal;}
+.h2 {letter-spacing: 30px;}
+.h2,.h3,.h5 {text-align: justify;}
+.h2,.h3,.h5 {text-align: center;}
+.h2,.h3,.h5 {font-size: 20px;}
+.h3,.h5 {letter-spacing: 20px;}
+.h2, { color: #58181D;}
+  {color: #f9745f;}
+
+.ENTRIES {
+border: 3px solid #965B59;
+float: right;
+padding: 10px;
+width: 25%;
+height: 25%;
+border-radius: 10px;
+margin-top: 40px;
+margin-right: -80%;
+}
+
+.ENTRIES2 {
+border: 3px solid #965B59;
+float: left;
+padding: 10px;
+width: 25%;
+height: 25%;
+border-radius: 10px;
+margin-top: 40px;
+margin-left: -110%;
+opacity: 0.8;
+}
+
+.s1 {
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 30%;
+
+}
+
+.s2 {
+  float: left;
+margin-right: 2.5%;
+  width: 30%;
+}
+
+.s3 {
+  float: right;
+  width: 30%;
+  margin-right: 2.5%;
+}
+
+.moveimage {
+  float: left;
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  margin-left: 30%;
+
+}
+.moveimage2 {
+  display: none;
+}
+.footer {
+  background: #fccfcf;
+  margin-top: 30px;
+    opacity: 0.7;
+  width: 100%;
+  height: 50px;
+padding-top: 25px;
+  border: 3px solid #965B59;
+  float: right;
+  letter-spacing: 20px;
+  text-align: center;
+    right: 200px;
+  {font-family: Nunito};
+}
+
+
+@media (max-width: 500px) {
+body {
+  width: 95%;
+    text-align: left;
+
+}
+  .wrapper {
+    width: 95%;
+  }
+  .wrapper2 {
+    width: 50%;
+    background: #fff;
+    margin: auto;
+  padding: 40px 80px 500px 50px;
+  }
+  .img2,.img3 {
+    width: 170%;
+    margin-left: -24.5%;
+  }
+  .h2 {
+    background: #f7c7c7;
+    align-items: left;
+    border: 3px solid #f8df6d;
+    padding: 10px;
+    width: 100%;	height: 80%;
+    right: 200px;
+    line-height: 140%;
+  }
+  .h2,.h3,.h5 {font-size: 12px;}
+  .h3,.h5 {letter-spacing: 10px;}
+  .h2 {letter-spacing: 10px;}
+
+  ul li {
+
+    margin-left: -45%;
+    margin-right: -50%;
+      text-indent: -1em;
+      }
+      .ENTRIES {
+      border: 3px solid #965B59;
+      float: right;
+      padding: 10px;
+      width: 40%;
+      height: 40%;
+      border-radius: 10px;
+      margin-top: 40px;
+      margin-right: -30%;
+      margin-bottom: 30%;
+      }
+
+      .ENTRIES2 {
+      border: 3px solid #965B59;
+      float: left;
+      padding: 10px;
+      width: 40%;
+      height: 40%;
+      border-radius: 10px;
+      margin-top: 40px;
+      margin-left: -10%;
+      }
+      .s1 {
+        float: left;
+        margin-left: -24%;
+        margin-right: 2.5%;
+        width: 52%;
+
+      }
+
+      .s2 {
+        float: left;
+      margin-right: 3%;
+      margin-left: 3%;
+        width: 52%;
+      }
+
+      .s3 {
+        float: right;
+        width: 52%;
+        margin-left: 0%;
+        margin-right: -43%;
+      }
+
+      .moveimage {display: none}
+
+      .moveimage2 {
+        width: 200%;
+        height: 200%;
+        margin-left: 10%;
+        float: left;
+}
+
+.footer {
+  background: #fccfcf;
+  margin-top: 30px;
+  float: left;
+  width: 118%;
+  margin-left: 2%;
+  letter-spacing: 10px;
+  text-align: center;
+  font-family: 'Nunito'; sans-serif;
+  font-size: 12px;
+}
